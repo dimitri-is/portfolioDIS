@@ -1,0 +1,190 @@
+/* --- PUPR THEME VARIABLES --- */
+        :root {
+            --pupr-blue: #004B87;      /* Biru Kepercayaan & Identitas Teknik */
+            --pupr-yellow: #FDB813;    /* Kuning Safety & Energi */
+            --asphalt-grey: #333333;   /* Hitam Arang untuk Kontras Teks */
+            --concrete-white: #f8f9fa; /* Putih Beton untuk Latar Belakang */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--asphalt-grey);
+            background-color: var(--concrete-white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, .navbar-brand, .btn {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- NAVBAR --- */
+        .navbar {
+            background-color: var(--pupr-blue);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-bottom: 5px solid var(--pupr-yellow);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: #fff !important;
+        }
+
+        .nav-link {
+            color: rgba(255,255,255,0.8) !important;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--pupr-yellow) !important;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero-section {
+            background: linear-gradient(135deg, var(--pupr-blue) 0%, #003366 100%);
+            color: white;
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: repeating-linear-gradient(
+                45deg,
+                var(--pupr-yellow),
+                var(--pupr-yellow) 20px,
+                #000 20px,
+                #000 40px
+            ); /* Efek garis safety line */
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--pupr-yellow);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .btn-safety {
+            background-color: var(--pupr-yellow);
+            color: var(--asphalt-grey);
+            font-weight: 700;
+            padding: 12px 30px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-safety:hover {
+            background-color: #e6a700;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(253, 184, 19, 0.4);
+        }
+
+        /* --- SECTIONS --- */
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 3rem;
+            color: var(--pupr-blue);
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 4px;
+            background-color: var(--pupr-yellow);
+            margin-top: 5px;
+        }
+
+        /* --- PROJECT CARD --- */
+        .card-project {
+            border: none;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .card-project:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header-custom {
+            background-color: var(--pupr-blue);
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .badge-tech {
+            background-color: rgba(0, 75, 135, 0.1);
+            color: var(--pupr-blue);
+            border: 1px solid var(--pupr-blue);
+            margin-right: 5px;
+            padding: 5px 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.8rem;
+        }
+
+        /* --- RESILIENCE TIMELINE --- */
+        .timeline {
+            border-left: 4px solid var(--pupr-blue);
+            margin-left: 20px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: var(--pupr-yellow);
+            border: 4px solid var(--pupr-blue);
+            border-radius: 50%;
+            position: absolute;
+            left: -42px;
+            top: 5px;
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: var(--pupr-blue);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--asphalt-grey);
+            color: white;
+            padding: 50px 0 20px;
+            border-top: 5px solid var(--pupr-yellow);
+        }
+        
+        .footer-link {
+            color: #ddd;
+            text-decoration: none;
+        }
+        
+        .footer-link:hover {
+            color: var(--pupr-yellow);
+        }
